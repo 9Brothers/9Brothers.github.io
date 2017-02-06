@@ -1,0 +1,15 @@
+{
+  "name": "cvc-test",
+  "description": "Teste de desenvolvimento para a CVC.",
+  "main": "gulpfile.js",
+  "authors": [
+    "Heber Teixeira"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "angular": "angularjs#^1.6.1",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}

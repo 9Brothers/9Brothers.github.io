@@ -1,0 +1,66 @@
+$sideMenuBgColor: #ffdc2c;
+$sideMenuColor: #3658a4;
+
+.side-menu {
+  background-color: $sideMenuBgColor;
+  color: $sideMenuColor !important;
+  padding: 10px;
+
+  label {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 100;
+    line-height: 0;
+    font-size: 9pt;
+  }
+
+  #check-outro-local {
+    color: $sideMenuColor !important;
+  }
+
+  .container-datetime {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+
+    .form-control {
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  $panelSuccessColor: #69b42e;
+  .panel-success {
+    border-color: $panelSuccessColor;
+    border-radius: 0;
+
+    .panel-heading {
+      padding: 3px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: $panelSuccessColor;
+      border-radius: 0;
+    }
+
+    .panel-body {
+      padding: 5px;
+      background-color: #fff1ab;
+
+      label {
+        color: $sideMenuColor;
+        text-transform: none;
+      }
+    }
+  }
+
+  #btn-search {
+    width: 100%;
+    line-height: 2.5;
+    font: {
+      size: 12pt;
+      weight: bold;
+    }
+    text-transform: uppercase;
+    background-color: #263c70;
+  }
+}
