@@ -1,0 +1,62 @@
+.no-padding {
+  padding: 0; }
+
+.no-left-radius {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.no-right-radius {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.filters .filter {
+  color: #3658a4;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.2); }
+  .filters .filter span {
+    color: #000;
+    text-transform: none; }
+
+.side-menu {
+  background-color: #ffdc2c;
+  color: #3658a4 !important;
+  padding: 10px; }
+  .side-menu label {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 100;
+    line-height: 0;
+    font-size: 9pt; }
+  .side-menu #check-outro-local {
+    color: #3658a4 !important; }
+  .side-menu .container-datetime {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 2px; }
+    .side-menu .container-datetime .form-control {
+      border: none;
+      box-shadow: none; }
+  .side-menu .panel-success {
+    border-color: #69b42e;
+    border-radius: 0; }
+    .side-menu .panel-success .panel-heading {
+      padding: 3px;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #69b42e;
+      border-radius: 0; }
+    .side-menu .panel-success .panel-body {
+      padding: 5px;
+      background-color: #fff1ab; }
+      .side-menu .panel-success .panel-body label {
+        color: #3658a4;
+        text-transform: none; }
+  .side-menu #btn-search {
+    width: 100%;
+    line-height: 2.5;
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #263c70; }
+
+/*# sourceMappingURL=all.min.css.map */
