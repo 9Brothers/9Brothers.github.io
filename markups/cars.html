@@ -1,34 +1,82 @@
-<div class="col-md-7">
-  <div class="clearfix">
-    <div class="col-md-5">Figura</div>
-    <div class="col-md-7">Descrição</div>
+<div class="clearfix bg-yellow">
+  <div class="col-md-9 main-content no-padding">
+    <div class="clearfix first-row">
+      <div class="col-md-5 image-container">
+        <img src="http://bit.ly/2leZHVc" alt="Gol G5">
+
+        <div class="col-md-4 image-discount txt-center" ng-if="hasDiscount">
+          <div>Desconto</div>
+          <div>20%</div>
+        </div>
+
+        <div class="col-md-4 image-brand">
+          <img src="http://bit.ly/2lf7SRg" alt="Hertz">
+        </div>
+      </div>
+
+      <div class="col-md-7 car-description">
+        <hgroup>
+          <div>
+            <div class="col-xs-11 no-padding">
+              <h2>Carro Econômico com Ar</h2>
+            </div>
+            <div class="col-xs-1 no-padding">
+              <i class="glyphicon glyphicon-heart red" ng-if="selected"></i>
+              <i class="glyphicon glyphicon-heart" ng-if="!selected"></i>
+            </div>
+          </div>
+          
+          <h5>Código da Taxa: IFMR</h5>
+          <h5>Chevrolet Celta, Ford Fiesta, VW Gol, Fiat Palio ou similar</h5>
+        </hgroup>
+
+        <ul class="no-padding">
+          <li>- Quilometragem livre</li>
+          <li>- Seguro total do veículo</li>
+          <li>- Seguro a terceiros</li>
+          <li>- Taxas de serviços inclusas</li>
+        </ul>
+
+        <div class="close-details "><span>Fechar detalhes</span> <i class="glyphicon glyphicon-remove"></i></div>
+      </div>
+    </div>
+
+    <div class="clearfix second-row">
+      <p>
+        Super inclusive promocional - Km livre, seguro total do veículo (LDW), seguro a terceiros (SLI), taxas de serviços inclusas
+        e 1 motorista adicional.
+      </p>
+
+      <div class="arrow-up"></div>
+      <div class="arrow-up arrow-up-assist"></div>
+    </div>
+
+    <div class="clearfix third-row">
+      <div class="col-md-4">Adicional 1</div>
+      <div class="col-md-4">Adicional 2</div>
+      <div class="col-md-4">Adicional 3</div>
+      <div class="col-md-4">Adicional 4</div>
+      <div class="col-md-4">Adicional 5</div>
+      <div class="col-md-4">Adicional 6</div>
+      <div class="col-md-4">Adicional 7</div>
+      <div class="col-md-4">Adicional 8</div>
+      <div class="col-md-4">Adicional 9</div>
+    </div>
   </div>
-  <div>Mais descrição</div>
-  <div class="col-md-4">Adicional 1</div>
-  <div class="col-md-4">Adicional 2</div>
-  <div class="col-md-4">Adicional 3</div>
-  <div class="col-md-4">Adicional 4</div>
-  <div class="col-md-4">Adicional 5</div>
-  <div class="col-md-4">Adicional 6</div>
-  <div class="col-md-4">Adicional 7</div>
-  <div class="col-md-4">Adicional 8</div>
-  <div class="col-md-4">Adicional 9</div>
-</div>
 
-
-
-
-
-
-<div class="col-md-2 txt-center">
-  <div class="total-locacao">Total da Locação</div>
-  <div ng-if="hasDiscount" class="discount">
-    de R$938
+  <div class="col-md-3 txt-center no-padding">
+    <div class="rent-content">
+      <div class="total-locacao">Total da Locação</div>
+      <div ng-if="hasDiscount" class="discount">
+        de R$938
+      </div>
+      <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">838</span></div>
+      <div class="qty-tuition">em até 10x</div>
+      <div class="btn-container">
+        <button type="button" class="btn btn-alugar">Alugar</button>
+        <div class="arrow-right"></div>
+      </div>
+      <div class="taxas">Taxas inclusas</div>
+    </div>
   </div>
-  <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">838</span></div>
-  <div class="qty-tuition">em até 10x</div>
-  <div>
-    <button type="button" class="btn btn-alugar">Alugar</button>
-  </div>
-  <div class="taxas">Taxas inclusas</div>
 </div>

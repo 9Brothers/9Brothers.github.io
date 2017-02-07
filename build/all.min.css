@@ -12,28 +12,117 @@
 .txt-center {
   text-align: center; }
 
-cars .total-locacao {
-  text-transform: uppercase;
-  font-size: 12pt;
-  font-weight: bold; }
+.bg-yellow {
+  background-color: #ffdc2c; }
 
-cars .unidade-monetaria, cars .qty-money, cars .qty-tuition {
-  color: #263c70;
-  font-weight: bold; }
+.bg-white {
+  background-color: #fff; }
 
-cars .qty-money {
-  font-size: 14pt; }
+.bd-bt-white {
+  border-bottom-color: #fff !important; }
 
-cars .btn-alugar {
-  background-color: #3658a4;
-  color: #fff;
-  text-transform: uppercase;
-  line-height: 2;
-  width: 50%;
-  font-weight: bold; }
+.red {
+  color: #d01111 !important; }
 
-cars .taxas {
-  font-size: 9pt; }
+cars .main-content {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff; }
+  cars .main-content .first-row, cars .main-content .second-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  cars .main-content .first-row .image-container {
+    position: relative; }
+    cars .main-content .first-row .image-container img {
+      width: 100%; }
+    cars .main-content .first-row .image-container .image-discount, cars .main-content .first-row .image-container .image-brand {
+      position: absolute; }
+    cars .main-content .first-row .image-container .image-discount {
+      background-color: #69b42e;
+      color: #fff;
+      text-transform: uppercase;
+      top: 0; }
+      cars .main-content .first-row .image-container .image-discount div:first-child {
+        font-size: 9pt; }
+      cars .main-content .first-row .image-container .image-discount div:last-child {
+        font-size: 13pt;
+        font-weight: bold; }
+    cars .main-content .first-row .image-container .image-brand {
+      right: 10px;
+      top: 10px; }
+  cars .main-content .first-row .car-description {
+    margin-bottom: 15px; }
+    cars .main-content .first-row .car-description hgroup {
+      text-transform: uppercase;
+      font-weight: bold; }
+      cars .main-content .first-row .car-description hgroup h2 {
+        color: #263c70; }
+      cars .main-content .first-row .car-description hgroup i {
+        font-size: 3.2em;
+        color: rgba(0, 0, 0, 0.1);
+        margin: 10px 0; }
+      cars .main-content .first-row .car-description hgroup h5 {
+        font-weight: bold;
+        margin: 5px 0; }
+    cars .main-content .first-row .car-description li {
+      list-style-type: none; }
+    cars .main-content .first-row .car-description .close-details {
+      color: #0087e5;
+      cursor: pointer; }
+      cars .main-content .first-row .car-description .close-details * {
+        display: inline-block;
+        vertical-align: middle; }
+  cars .main-content .second-row, cars .main-content .third-row {
+    padding: 10px; }
+  cars .main-content .second-row {
+    position: relative; }
+    cars .main-content .second-row .arrow-up {
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: -15px;
+      left: 50%;
+      margin-left: -15px;
+      border-right: 15px solid transparent;
+      border-left: 15px solid transparent;
+      border-bottom: 15px solid rgba(0, 0, 0, 0.1); }
+    cars .main-content .second-row .arrow-up-assist {
+      border-bottom-color: #fff;
+      top: -14px; }
+  cars .main-content .third-row {
+    color: #263c70; }
+
+cars .rent-content {
+  padding: 40px 0; }
+  cars .rent-content .total-locacao {
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: bold; }
+  cars .rent-content .unidade-monetaria, cars .rent-content .qty-money, cars .rent-content .qty-tuition {
+    color: #263c70;
+    font-weight: bold; }
+  cars .rent-content .qty-money {
+    font-size: 14pt; }
+  cars .rent-content .btn-container {
+    position: relative; }
+    cars .rent-content .btn-container .btn-alugar {
+      background-color: #3658a4;
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 2;
+      width: 50%;
+      font-weight: bold;
+      margin: 10px 0; }
+    cars .rent-content .btn-container .arrow-right {
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      margin-top: -10px;
+      left: -1px;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 13px solid #fff; }
+  cars .rent-content .taxas {
+    font-size: 9pt; }
 
 .filters .filter {
   color: #3658a4;

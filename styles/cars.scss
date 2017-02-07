@@ -1,31 +1,165 @@
 cars {
-  .total-locacao {
-    text-transform: uppercase;
-    font-size: 12pt;
-    font-weight: bold;
+  .main-content {
+    border: 1px solid rgba(0,0,0, 0.1);
+    background-color: #fff;
+
+    .first-row, .second-row {
+      border-bottom: 1px solid rgba(0,0,0, 0.1);
+    }
+
+    .first-row {
+
+      .image-container {
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+
+        .image-discount, .image-brand {
+          position: absolute;      
+        }
+
+        .image-discount {
+          background-color: #69b42e;
+          color: #fff;
+          text-transform: uppercase;
+          top: 0;
+
+          div:first-child {
+            font-size: 9pt;
+          }
+
+          div:last-child {
+            font-size: 13pt;
+            font-weight: bold;
+          }
+        }
+
+        .image-brand {
+          right: 10px;
+          top: 10px;
+        }
+      }
+
+      .car-description {
+        margin-bottom: 15px;
+
+        hgroup {
+          text-transform: uppercase;
+          font-weight: bold;
+
+          h2 {
+            color: #263c70
+          }
+
+          i {
+            font-size: 3.2em;
+            color: rgba(0,0,0, 0.1);
+            margin: 10px 0;
+          }
+
+          h5 {
+            font-weight: bold;
+            margin: 5px 0;
+          }
+        }
+
+        li {
+          list-style-type: none;
+        }
+
+        .close-details {
+          color: #0087e5;
+          cursor: pointer;
+
+          * {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+
+    }
+
+    .second-row, .third-row {
+      padding: 10px;
+    }
+
+    .second-row {
+      position: relative;
+
+      .arrow-up {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -15px;
+        left: 50%;
+        margin-left: -15px;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid rgba(0,0,0, 0.1);
+      }
+
+      .arrow-up-assist {
+        border-bottom-color: #fff;
+        top: -14px;
+      }
+    }
+
+    .third-row {
+      color: #263c70;
+    }
   }
 
-  .discount {}
+  .rent-content {
+    padding: 40px 0;
 
-  .unidade-monetaria, .qty-money, .qty-tuition {
-    color: #263c70;
-    font-weight: bold;
-  }
+    .total-locacao {
+      text-transform: uppercase;
+      font-size: 12pt;
+      font-weight: bold;
+    }
 
-  .qty-money {
-    font-size: 14pt;
-  }
+    .discount {}
 
-  .btn-alugar {
-    background-color: #3658a4;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 2;
-    width: 50%;
-    font-weight: bold;
-  }
+    .unidade-monetaria, .qty-money, .qty-tuition {
+      color: #263c70;
+      font-weight: bold;
+    }
 
-  .taxas {
-    font-size: 9pt;
+    .qty-money {
+      font-size: 14pt;
+    }
+
+    .btn-container {
+      position: relative;
+
+      .btn-alugar {
+        background-color: #3658a4;
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 2;
+        width: 50%;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .arrow-right {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        margin-top: -10px;
+        left: -1px;
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 13px solid #fff;
+      }
+    }
+
+    .taxas {
+      font-size: 9pt;
+    }
   }
 }
