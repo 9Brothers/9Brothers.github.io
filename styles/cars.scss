@@ -1,0 +1,31 @@
+cars {
+  .total-locacao {
+    text-transform: uppercase;
+    font-size: 12pt;
+    font-weight: bold;
+  }
+
+  .discount {}
+
+  .unidade-monetaria, .qty-money, .qty-tuition {
+    color: #263c70;
+    font-weight: bold;
+  }
+
+  .qty-money {
+    font-size: 14pt;
+  }
+
+  .btn-alugar {
+    background-color: #3658a4;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 2;
+    width: 50%;
+    font-weight: bold;
+  }
+
+  .taxas {
+    font-size: 9pt;
+  }
+}
