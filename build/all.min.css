@@ -24,6 +24,9 @@
 .red {
   color: #d01111 !important; }
 
+.mg-tp-bt-20 {
+  margin: 20px 0; }
+
 cars .main-content {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff; }
@@ -59,6 +62,10 @@ cars .main-content {
         font-size: 3.2em;
         color: rgba(0, 0, 0, 0.1);
         margin: 10px 0; }
+        @media all and (max-width: 1270px) {
+          cars .main-content .first-row .car-description hgroup i {
+            font-size: 2.5em;
+            margin: 20px 0; } }
       cars .main-content .first-row .car-description hgroup h5 {
         font-weight: bold;
         margin: 5px 0; }
@@ -124,23 +131,30 @@ cars .rent-content {
   cars .rent-content .taxas {
     font-size: 9pt; }
 
-.filters .filter {
-  color: #3658a4;
-  text-transform: uppercase;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  line-height: 3;
-  padding: 0 6px;
-  font-size: 9pt; }
-  .filters .filter span {
-    color: #000;
-    text-transform: none;
-    font-size: 12pt; }
-
-.filters #select-itens-pagina, .filters #select-moeda {
-  min-width: 173px; }
-
-.filters #select-ordenar-por {
-  min-width: 260px; }
+.filters {
+  margin-bottom: 30px; }
+  @media all and (min-width: 991px) {
+    .filters .filter:first-child {
+      margin-left: 0; } }
+  .filters .filter {
+    color: #3658a4;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    line-height: 3;
+    padding: 0 6px;
+    font-size: 9pt;
+    cursor: pointer;
+    margin: 0 15px; }
+    .filters .filter span {
+      color: #000;
+      text-transform: none;
+      font-size: 12pt; }
+    .filters .filter i.glyphicon {
+      top: 8px; }
+  .filters #select-itens-pagina, .filters #select-moeda {
+    min-width: 173px; }
+  .filters #select-ordenar-por {
+    min-width: 260px; }
 
 .side-menu {
   background-color: #ffdc2c;
