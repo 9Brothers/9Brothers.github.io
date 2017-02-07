@@ -3,18 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <link rel="stylesheet" href="/build/libraries.min.css">
   <link rel="stylesheet" href="/build/all.min.css">
   <script type="text/javascript" src="/build/libraries.min.js"></script>
   <script type="text/javascript" src="/build/all.min.js"></script>
 </head>
 
-<body ng-view>
+<body ng-view ng-controller="DefaultCtrl as vm">
   <div class="mg-tp-bt-20">
     <side-menu class="col-md-3"></side-menu>
     <div class="content col-md-9">
       <filters></filters>
       <cars></cars>
+      <pagination></pagination>
     </div>
   </div>
 </body>

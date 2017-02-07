@@ -13,7 +13,8 @@ gulp.task('default', function() {
 gulp.task('script_libraries', function() {
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/angular/angular.min.js'
+    'bower_components/angular*/angular*.min.js',
+    'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js'
   ]).pipe(concat('libraries.min.js'))
   .pipe(gulp.dest('build'));
 });
@@ -27,13 +28,15 @@ gulp.task('style_libraries', function() {
 
 gulp.task('scripts', function(){
   gulp.src([
+    'scripts/helpers.js',
     'scripts/app.js',
     'scripts/directives/*.js',
     'scripts/factories/*.js',
+    'scripts/filters/*.js',
     'scripts/controllers/*.js',
   ]).pipe(sourcemaps.init())
   .pipe(concat('all.min.js'))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('build'));
 });

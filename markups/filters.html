@@ -1,16 +1,16 @@
 <div class="filters clearfix">
   <div class="col-md-2 filter clearfix" id="select-itens-pagina">
-    <div class="col-xs-11 no-padding">Itens por Página: <span>100</span></div>
+    <div class="col-xs-11 no-padding">Itens por Página: <span><input type="number" min="1" max="20" ng-model="vm.itemsPerPage"></span></div>
     <div class="col-xs-1 no-padding"><i class="glyphicon glyphicon-chevron-down"></i></div>
   </div>
 
   <div class="col-md-3 filter clearfix" id="select-ordenar-por">
-    <div class="col-xs-11 no-padding">Ordenar por: <span>Menor preço</span></div>
+    <div class="col-xs-11 no-padding">Ordenar por: <span><select ng-model="vm.select.order" ng-options="order.value for order in vm.orderBy"></select></span></div>
     <div class="col-xs-1 no-padding"><i class="glyphicon glyphicon-chevron-down"></i></div>
   </div>
 
   <div class="col-md-2 filter clearfix" id="select-moeda">
-    <div class="col-xs-11 no-padding">Moeda: <span>Real</span></div>
+    <div class="col-xs-11 no-padding">Moeda: <span><select ng-model="vm.select.moeda" ng-options="moeda.value for moeda in vm.moedas"></select></span></div>
     <div class="col-xs-1 no-padding"><i class="glyphicon glyphicon-chevron-down"></i></div>
   </div>
 </div>

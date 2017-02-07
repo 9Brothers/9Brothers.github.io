@@ -1,16 +1,18 @@
-<div class="clearfix bg-yellow">
+<div class="clearfix bg-yellow mg-bt-40" ng-repeat="commercial in vm.commercials | orderBy: (vm.select.order.sign + 'rent.total') | startFrom: ((vm.currentPage * vm.itemsPerPage) - vm.itemsPerPage) | limitTo: vm.itemsPerPage">
+<!--<div class="clearfix bg-yellow mg-bt-40" ng-repeat="commercial in vm.commercials | orderBy: (vm.select.order.sign + 'rent.total') | limitTo: vm.itemsPerPage">-->
+<!--<div class="clearfix bg-yellow mg-bt-40" ng-repeat="commercial in vm.commercials | orderBy: (vm.select.order.sign + 'rent.total')">-->
   <div class="col-md-9 main-content no-padding">
     <div class="clearfix first-row">
       <div class="col-md-5 image-container no-padding">
-        <img src="http://bit.ly/2leZHVc" alt="Gol G5">
+        <img src="{{ commercial.carPicture.src }}" alt="{{ commercial.carPicture.alt }}">
 
-        <div class="col-md-4 image-discount txt-center" ng-if="hasDiscount">
+        <div class="col-md-4 image-discount txt-center" ng-if="commercial.discount.have">
           <div>Desconto</div>
-          <div>20%</div>
+          <div>{{ commercial.discount.percent }}%</div>
         </div>
 
         <div class="col-md-4 image-brand">
-          <img src="http://bit.ly/2lf7SRg" alt="Hertz">
+          <img src="{{ commercial.brandImage.src }}" alt="{{ commercial.brandImage.alt }}">
         </div>
       </div>
 
@@ -18,60 +20,51 @@
         <hgroup>
           <div>
             <div class="col-xs-11 no-padding">
-              <h2>Carro Econômico com Ar</h2>
+              <h2>{{ commercial.title }}</h2>
             </div>
             <div class="col-xs-1 no-padding">
-              <i class="glyphicon glyphicon-heart red" ng-if="selected"></i>
-              <i class="glyphicon glyphicon-heart" ng-if="!selected"></i>
+              <i class="glyphicon glyphicon-heart red" ng-if="commercial.marked" ng-click="commercial.marked = !commercial.marked"></i>
+              <i class="glyphicon glyphicon-heart" ng-if="!commercial.marked" ng-click="commercial.marked = !commercial.marked"></i>
             </div>
           </div>
           
-          <h5>Código da Taxa: IFMR</h5>
-          <h5>Chevrolet Celta, Ford Fiesta, VW Gol, Fiat Palio ou similar</h5>
+          <h5>Código da Taxa: {{ commercial.impostCode }}</h5>
+          <h5>{{ commercial.availableCars }}</h5>
         </hgroup>
 
         <ul class="no-padding">
-          <li>- Quilometragem livre</li>
-          <li>- Seguro total do veículo</li>
-          <li>- Seguro a terceiros</li>
-          <li>- Taxas de serviços inclusas</li>
+          <li ng-repeat="detail in commercial.details">- {{ detail }}</li>          
         </ul>
 
-        <div class="close-details "><span>Fechar detalhes</span> <i class="glyphicon glyphicon-remove"></i></div>
+        <div class="close-details"><span>Fechar detalhes</span> <i class="glyphicon glyphicon-remove"></i></div>
       </div>
     </div>
 
-    <div class="clearfix second-row">
-      <p>
-        Super inclusive promocional - Km livre, seguro total do veículo (LDW), seguro a terceiros (SLI), taxas de serviços inclusas
-        e 1 motorista adicional.
-      </p>
+    <div class="clearfix second-row" ng-if="commercial.comment">
+      <div>{{ commercial.comment }} </div>
 
       <div class="arrow-up"></div>
       <div class="arrow-up arrow-up-assist"></div>
     </div>
 
     <div class="clearfix third-row">
-      <div class="col-md-4">Adicional 1</div>
-      <div class="col-md-4">Adicional 2</div>
-      <div class="col-md-4">Adicional 3</div>
-      <div class="col-md-4">Adicional 4</div>
-      <div class="col-md-4">Adicional 5</div>
-      <div class="col-md-4">Adicional 6</div>
-      <div class="col-md-4">Adicional 7</div>
-      <div class="col-md-4">Adicional 8</div>
-      <div class="col-md-4">Adicional 9</div>
+      <div class="col-md-4" ng-repeat="additional in commercial.additionals"><i ng-class="additional.icon"></i> {{ additional.title }}</div>      
     </div>
   </div>
 
   <div class="col-md-3 txt-center no-padding">
     <div class="rent-content">
       <div class="total-locacao">Total da Locação</div>
-      <div ng-if="hasDiscount" class="discount">
-        de R$938
+      <div ng-if="commercial.discount.have" class="discount">
+        <div class="discount">
+          de R$ {{ commercial.rent.total }}
+        </div>
+        <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">{{ (commercial.rent.total - (commercial.rent.total * (commercial.discount.percent / 100))) | currency:"":2 }}</span></div>
       </div>
-      <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">838</span></div>
-      <div class="qty-tuition">em até 10x</div>
+      <div ng-if="!commercial.discount.have">
+        <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">{{ commercial.rent.total | currency:"":2 }}</span></div>
+      </div>
+      <div class="qty-plots" ng-if="commercial.rent.plots > 1">em até 10x</div>
       <div class="btn-container">
         <button type="button" class="btn btn-alugar">Alugar</button>
         <div class="arrow-right"></div>

@@ -27,6 +27,9 @@
 .mg-tp-bt-20 {
   margin: 20px 0; }
 
+.mg-bt-40 {
+  margin-bottom: 40px; }
+
 cars .main-content {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff; }
@@ -50,7 +53,8 @@ cars .main-content {
         font-weight: bold; }
     cars .main-content .first-row .image-container .image-brand {
       right: 10px;
-      top: 10px; }
+      top: 10px;
+      opacity: 0.7; }
   cars .main-content .first-row .car-description {
     margin-bottom: 15px; }
     cars .main-content .first-row .car-description hgroup {
@@ -61,7 +65,8 @@ cars .main-content {
       cars .main-content .first-row .car-description hgroup i {
         font-size: 3.2em;
         color: rgba(0, 0, 0, 0.1);
-        margin: 10px 0; }
+        margin: 10px 0;
+        cursor: pointer; }
         @media all and (max-width: 1270px) {
           cars .main-content .first-row .car-description hgroup i {
             font-size: 2.5em;
@@ -103,7 +108,7 @@ cars .rent-content {
     text-transform: uppercase;
     font-size: 12pt;
     font-weight: bold; }
-  cars .rent-content .unidade-monetaria, cars .rent-content .qty-money, cars .rent-content .qty-tuition {
+  cars .rent-content .unidade-monetaria, cars .rent-content .qty-money, cars .rent-content .qty-plots {
     color: #263c70;
     font-weight: bold; }
   cars .rent-content .qty-money {
@@ -149,6 +154,13 @@ cars .rent-content {
       color: #000;
       text-transform: none;
       font-size: 12pt; }
+      .filters .filter span input {
+        line-height: 2;
+        outline: none;
+        border: none; }
+      .filters .filter span select {
+        outline: none;
+        border: none; }
     .filters .filter i.glyphicon {
       top: 8px; }
   .filters #select-itens-pagina, .filters #select-moeda {
