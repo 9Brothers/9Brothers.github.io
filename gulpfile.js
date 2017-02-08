@@ -36,7 +36,7 @@ gulp.task('scripts', function(){
     'scripts/controllers/*.js',
   ]).pipe(sourcemaps.init())
   .pipe(concat('all.min.js'))
-  // .pipe(uglify())
+  .pipe(uglify())
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('build'));
 });
