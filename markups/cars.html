@@ -1,6 +1,4 @@
 <div class="clearfix bg-yellow mg-bt-40" ng-repeat="commercial in vm.commercials | orderBy: (vm.select.order.sign + 'rent.total') | startFrom: ((vm.currentPage * vm.itemsPerPage) - vm.itemsPerPage) | limitTo: vm.itemsPerPage">
-<!--<div class="clearfix bg-yellow mg-bt-40" ng-repeat="commercial in vm.commercials | orderBy: (vm.select.order.sign + 'rent.total') | limitTo: vm.itemsPerPage">-->
-<!--<div class="clearfix bg-yellow mg-bt-40" ng-repeat="commercial in vm.commercials | orderBy: (vm.select.order.sign + 'rent.total')">-->
   <div class="col-md-9 main-content no-padding">
     <div class="clearfix first-row">
       <div class="col-md-5 image-container no-padding">
@@ -64,7 +62,7 @@
       <div ng-if="!commercial.discount.have">
         <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">{{ commercial.rent.total | currency:"":2 }}</span></div>
       </div>
-      <div class="qty-plots" ng-if="commercial.rent.plots > 1">em até 10x</div>
+      <div class="qty-plots" ng-if="commercial.rent.plots > 1">em até {{ commercial.rent.plots }}x</div>
       <div class="btn-container">
         <button type="button" class="btn btn-alugar">Alugar</button>
         <div class="arrow-right"></div>
