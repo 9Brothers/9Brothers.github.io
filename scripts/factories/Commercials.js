@@ -26,8 +26,11 @@
                   "Seguro total do veículo",
                   "Seguro a terceiros",
                   "Taxas de serviços inclusas"
-                ],
-                comment: "Super inclusive promocional - Km livre, seguro total do veículo (LDW), seguro a terceiros (SLI), taxas de serviços inclusas e 1 motorista adicional.",
+                ],                
+                moreDetails: {
+                  open: true,
+                  comment: "Super inclusive promocional - Km livre, seguro total do veículo (LDW), seguro a terceiros (SLI), taxas de serviços inclusas e 1 motorista adicional.",
+                },
                 additionals: [
                   {
                     title: "Adicional 1",
@@ -93,8 +96,11 @@
                   "Seguro total do veículo",
                   "Seguro a terceiros",
                   "Taxas de serviços inclusas"
-                ],
-                comment: "",
+                ],                
+                moreDetails: {
+                  open: true,
+                  comment: "",
+                },
                 additionals: [
                   {
                     title: "Adicional 2",
@@ -144,7 +150,11 @@
                   "Seguro a terceiros",
                   "Taxas de serviços inclusas"
                 ],
-                comment: "",
+                
+                moreDetails: {
+                  open: false,
+                  comment: "",
+                },
                 additionals: [
                   {
                     title: "Adicional 2",

@@ -33,6 +33,9 @@
 cars .main-content {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #fff; }
+  cars .main-content .hide-row {
+    border: none !important;
+    padding: 0 !important; }
   cars .main-content .first-row, cars .main-content .second-row {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   cars .main-content .first-row .image-container {
@@ -56,7 +59,7 @@ cars .main-content {
       top: 10px;
       opacity: 0.7; }
   cars .main-content .first-row .car-description {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
     cars .main-content .first-row .car-description hgroup {
       text-transform: uppercase;
       font-weight: bold; }
@@ -76,22 +79,25 @@ cars .main-content {
         margin: 5px 0; }
     cars .main-content .first-row .car-description li {
       list-style-type: none; }
-    cars .main-content .first-row .car-description .close-details {
-      color: #0087e5;
-      cursor: pointer; }
-      cars .main-content .first-row .car-description .close-details * {
-        display: inline-block;
-        vertical-align: middle; }
   cars .main-content .second-row, cars .main-content .third-row {
     padding: 10px; }
   cars .main-content .second-row {
     position: relative; }
-    cars .main-content .second-row .arrow-up {
+    cars .main-content .second-row .close-details, cars .main-content .second-row .arrow-up {
       position: absolute;
+      left: 50%; }
+    cars .main-content .second-row .close-details {
+      top: -35px;
+      color: #0087e5;
+      cursor: pointer;
+      margin-left: -60px; }
+      cars .main-content .second-row .close-details * {
+        display: inline-block;
+        vertical-align: middle; }
+    cars .main-content .second-row .arrow-up {
+      top: -15px;
       width: 0;
       height: 0;
-      top: -15px;
-      left: 50%;
       margin-left: -15px;
       border-right: 15px solid transparent;
       border-left: 15px solid transparent;

@@ -3,6 +3,11 @@ cars {
     border: 1px solid rgba(0,0,0, 0.1);
     background-color: #fff;
 
+    .hide-row {
+      border: none !important;
+      padding: 0 !important;
+    }
+
     .first-row, .second-row {
       border-bottom: 1px solid rgba(0,0,0, 0.1);
     }
@@ -44,7 +49,7 @@ cars {
       }
 
       .car-description {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
 
         hgroup {
           text-transform: uppercase;
@@ -75,16 +80,6 @@ cars {
         li {
           list-style-type: none;
         }
-
-        .close-details {
-          color: #0087e5;
-          cursor: pointer;
-
-          * {
-            display: inline-block;
-            vertical-align: middle;
-          }
-        }
       }
 
     }
@@ -96,12 +91,27 @@ cars {
     .second-row {
       position: relative;
 
-      .arrow-up {
+      .close-details, .arrow-up {
         position: absolute;
+        left: 50%;
+      }
+
+      .close-details {
+        top: -35px;
+        color: #0087e5;
+        cursor: pointer;
+        margin-left: -60px;
+
+        * {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      .arrow-up {
+        top: -15px;
         width: 0;
         height: 0;
-        top: -15px;
-        left: 50%;
         margin-left: -15px;
         border-right: 15px solid transparent;
         border-left: 15px solid transparent;
