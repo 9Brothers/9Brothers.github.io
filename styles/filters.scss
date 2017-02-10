@@ -17,6 +17,7 @@
     font-size: 9pt;
     cursor: pointer;
     margin: 0 15px;
+    position: relative;
 
     span {
       color: #000;
@@ -35,16 +36,42 @@
         }
     }
 
+    input#input-select-items-per-page, 
+    select#select-ordenar-por,
+    select#select-moeda {
+      display: none; 
+    }
+
+    #filter-select-items-per-page, 
+    #filter-select-ordenar-por,
+    #filter-select-moeda {
+      position: absolute;
+      top: 48px;
+      left: -1px;
+      z-index: 100;
+      background-color: #fff;
+      width: calc(100% + 2px);
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid rgba(0,0,0,0.07);
+      display: none;
+
+      div {
+        padding-left: 10px;
+      }
+    }
+
+
     i.glyphicon {
       top: 8px;
     }
   }
 
-  #select-itens-pagina, #select-moeda {
+  #filter-itens-pagina, #filter-moeda {
     min-width: 173px;
   }
 
-  #select-ordenar-por {
+  #filter-ordenar-por {
     min-width: 260px;
   }
 }

@@ -28,6 +28,7 @@ gulp.task('style_libraries', function() {
 
 gulp.task('scripts', function(){
   gulp.src([
+    'scripts/jquery/*.js',
     'scripts/helpers.js',
     'scripts/app.js',
     'scripts/directives/*.js',
@@ -36,7 +37,7 @@ gulp.task('scripts', function(){
     'scripts/controllers/*.js',
   ]).pipe(sourcemaps.init())
   .pipe(concat('all.min.js'))
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('build'));
 });

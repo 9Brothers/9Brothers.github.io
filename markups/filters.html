@@ -1,16 +1,165 @@
 <div class="filters clearfix">
-  <div class="col-md-2 filter clearfix" id="select-itens-pagina">
-    <div class="col-xs-11 no-padding">Itens por Página: <span><input type="number" min="1" max="20" ng-model="vm.itemsPerPage"></span></div>
+  <div class="col-md-2 filter clearfix" id="filter-itens-pagina">
+    <div class="col-xs-11 no-padding">Itens por Página: <span>{{ vm.itemsPerPage }}</span></div>
     <div class="col-xs-1 no-padding"><i class="glyphicon glyphicon-chevron-down"></i></div>
+    
+    <div id="filter-select-items-per-page">
+      <div qty-items="1">1</div>
+      <div qty-items="2">2</div>
+      <div qty-items="3">3</div>
+      <div qty-items="4">4</div>
+      <div qty-items="5">5</div>
+      <div qty-items="6">6</div>
+      <div qty-items="7">7</div>
+      <div qty-items="8">8</div>
+      <div qty-items="9">9</div>
+      <div qty-items="10">10</div>
+      <div qty-items="11">11</div>
+      <div qty-items="12">12</div>
+      <div qty-items="13">13</div>
+      <div qty-items="14">14</div>
+      <div qty-items="15">15</div>
+      <div qty-items="16">16</div>
+      <div qty-items="17">17</div>
+      <div qty-items="18">18</div>
+      <div qty-items="19">19</div>
+      <div qty-items="20">20</div>
+    </div>
+    
+    <!-- este input ficará invisível -->
+    <input id="input-select-items-per-page" type="number" min="1" max="20" ng-model="vm.itemsPerPage"> 
   </div>
 
-  <div class="col-md-3 filter clearfix" id="select-ordenar-por">
-    <div class="col-xs-11 no-padding">Ordenar por: <span><select ng-model="vm.select.order" ng-options="order.value for order in vm.orderBy"></select></span></div>
+  <div class="col-md-3 filter clearfix" id="filter-ordenar-por">
+    <div class="col-xs-11 no-padding">Ordenar por: <span>{{ vm.select.order.value }}</span></div>
     <div class="col-xs-1 no-padding"><i class="glyphicon glyphicon-chevron-down"></i></div>
+
+    <div id="filter-select-ordenar-por">
+      <div orderby="{{ order.value }}" ng-repeat="order in vm.orderBy">{{ order.value }}</div>
+    </div>
+
+    <!-- este select ficará invisível -->
+    <select id="select-ordenar-por" ng-model="vm.select.order" ng-options="order.value for order in vm.orderBy"></select>
   </div>
 
-  <div class="col-md-2 filter clearfix" id="select-moeda">
-    <div class="col-xs-11 no-padding">Moeda: <span><select ng-model="vm.select.moeda" ng-options="moeda.value for moeda in vm.moedas"></select></span></div>
+  <div class="col-md-2 filter clearfix" id="filter-moeda">
+    <div class="col-xs-11 no-padding">Moeda: <span>{{ vm.select.moeda.value }}</span></div>
     <div class="col-xs-1 no-padding"><i class="glyphicon glyphicon-chevron-down"></i></div>
+
+    <div id="filter-select-moeda">
+      <div moeda="{{ moeda.value }}" ng-repeat="moeda in vm.moedas">{{ moeda.value }}</div>
+    </div>
+
+    <!-- este select firavá invisível -->
+    <select id="select-moeda" ng-model="vm.select.moeda" ng-options="moeda.value for moeda in vm.moedas"></select>
   </div>
 </div>
+
+<!-- 
+
+  O fato deste trecho ficar inline, é totalmente proposital,
+  pois, dessa forma somente quando esta diretiva for chamada estas funções serão executadas.
+
+ -->
+<script type="text/javascript">
+$(function(){
+
+  var huntFilter = setInterval(function(){
+    var filterSelectItemsPerPageLenght = $("#filter-itens-pagina").length;
+    var filterOrderByLength = $('#filter-ordenar-por').length;
+    var filterByMoedaLength = $('#filter-moeda').length;
+
+
+    if(filterSelectItemsPerPageLenght && filterOrderByLength && filterByMoedaLength) {
+      clearInterval(huntFilter);
+
+      addEvents();
+    }
+  }, 100);
+});
+
+function addEvents() {
+  addEventsToFilterItemsPerPage();
+  addEventsToFilterOrderBy();
+  addEventsToFilterMoeda();
+}
+
+  function addEventsToFilterItemsPerPage() {
+    showSelectItemsPerPage();
+    selectQtyItems();
+  }
+
+    function showSelectItemsPerPage() {
+      $('#filter-itens-pagina')
+        .click(function() {
+          $('#filter-select-items-per-page').show();
+        });
+    }
+
+    function selectQtyItems() {
+      $("#filter-select-items-per-page > div")
+        .click(function(e){
+          var itemsPerPage = +$(this).attr('qty-items');
+
+          $("#input-select-items-per-page").val(itemsPerPage).trigger('change');
+
+          $(this).parent().hide();      
+
+          e.stopPropagation();
+        });
+    }
+
+  function addEventsToFilterOrderBy() {
+    showSelectOrderBy();
+    selectOrder();
+  }
+
+    function showSelectOrderBy() {
+      $("#filter-ordenar-por")
+        .click(function() {
+          $('#filter-select-ordenar-por').show();
+        });
+    }
+
+    function selectOrder() {
+      $('#filter-select-ordenar-por > div')
+        .click(function(e){
+          var text = $(this).attr('orderby');
+
+          text = $("#select-ordenar-por > option[label='"+ text +"']").val()
+
+          $("#select-ordenar-por").val(text).trigger('change');
+
+          $(this).parent().hide();
+
+          e.stopPropagation();
+        });
+    }
+
+  function addEventsToFilterMoeda() {
+    showSelectMoeda();
+    selectMoeda();
+  }
+
+    function showSelectMoeda() {
+      $('#filter-moeda')
+        .click(function(){
+          $("#filter-select-moeda").show();
+        });
+    }
+
+    function selectMoeda() {
+      $('#filter-select-moeda > div')
+        .click(function(e){
+          var moeda = $(this).attr('moeda');
+
+          moeda = $('#select-moeda > option[label="'+ moeda +'"]').val();
+
+          $('#select-moeda').val(moeda).trigger('change');
+
+          $(this).parent().hide();
+
+          e.stopPropagation();
+        });
+    }
+</script>
