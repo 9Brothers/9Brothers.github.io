@@ -138,7 +138,21 @@ cars {
       font-weight: bold;
     }
 
-    // .discount {}
+    .discount {
+      position: relative;
+      z-index: 10;
+
+      .stripe {
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: red;
+        transform: rotateZ(-190deg);
+        top: 10px;
+        left: calc(50% - 50px);
+        z-index: 20;
+      }
+    }
 
     .unidade-monetaria, .qty-money, .qty-plots {
       color: #263c70;
@@ -160,6 +174,7 @@ cars {
         width: 50%;
         font-weight: bold;
         margin: 10px 0;
+        border-bottom: 2px solid #263c70;
       }
 
       .arrow-right {

@@ -53,9 +53,10 @@
   <div class="col-md-3 txt-center no-padding">
     <div class="rent-content">
       <div class="total-locacao">Total da Locação</div>
-      <div ng-if="commercial.discount.have" class="discount">
+      <div ng-if="commercial.discount.have">
         <div class="discount">
-          de R$ {{ commercial.rent.total }}
+          <div>de R$ {{ commercial.rent.total }}</div>
+          <div class="stripe"></div>
         </div>
         <div>por <span class="unidade-monetaria">R$ </span><span class="qty-money">{{ (commercial.rent.total - (commercial.rent.total * (commercial.discount.percent / 100))) | currency:"":2 }}</span></div>
       </div>

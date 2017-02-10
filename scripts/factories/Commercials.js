@@ -99,7 +99,7 @@
                 ],                
                 moreDetails: {
                   open: true,
-                  comment: "",
+                  comment: "Super inclusive promocional - Km livre, seguro total do veículo (LDW), seguro a terceiros (SLI), taxas de serviços inclusas e 1 motorista adicional.",
                 },
                 additionals: [
                   {
@@ -153,7 +153,7 @@
                 
                 moreDetails: {
                   open: false,
-                  comment: "",
+                  comment: "Super inclusive promocional - Km livre, seguro total do veículo (LDW), seguro a terceiros (SLI), taxas de serviços inclusas e 1 motorista adicional.",
                 },
                 additionals: [
                   {
