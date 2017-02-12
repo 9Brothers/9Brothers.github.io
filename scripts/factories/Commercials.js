@@ -8,7 +8,7 @@
       function ($http) {
         return {
           get: function () {
-            return $http.get('/json/Commercials.json');
+            return $http.get('/json/commercials.json');
           }
         }
       }
