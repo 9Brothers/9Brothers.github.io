@@ -1,7 +1,12 @@
 <div class="side-menu">
-  <div class="form-group">
-    <label for="local-retirada">Local de Retirada</label>
-    <input type="text" class="form-control" name="input-local-retirada" id="input-local-retirada" placeholder="Informe o local de retirada">
+  <div class="form-group" id="local-retirada">
+    <label for="input-local-retirada">Local de Retirada</label>
+    <input type="text" ng-model="vm.withdrawal" ng-change="vm.changeWithdrawal()" class="form-control" name="input-local-retirada" id="input-local-retirada" placeholder="Tente Diadema">
+
+    <div id="select-local-retirada" class="tips" ng-if="vm.withdrawal">
+      <div ng-repeat="withdrawal in vm.places.withdrawal | filter: vm.withdrawal" ng-click="vm.setWithdrawal(this)">{{ withdrawal }}</div>
+      <div ng-if="!(vm.places.withdrawal | filter: vm.withdrawal).length">Nenhuma localidade encontrada</div>
+    </div>
   </div>
 
   <div class="form-group">
@@ -9,9 +14,14 @@
     <label for="check-outro-local" id="check-outro-local">Devolver o carro em outro local</label>
   </div>
 
-  <div class="form-group">
-    <label for="local-devolucao">Local de Devolução</label>
-    <input type="text" class="form-control" name="input-local-devolucao" id="input-local-devolucao" placeholder="informe o local de devolução">
+  <div class="form-group" id="local-devolucao">
+    <label for="input-local-devolucao">Local de Devolução</label>
+    <input type="text" ng-model="vm.return" class="form-control" name="input-local-devolucao" id="input-local-devolucao" placeholder="Tente a">
+
+    <div id="select-local-devolucao" class="tips" ng-if="vm.return">
+      <div ng-repeat="return in vm.places.return | filter: vm.return" ng-click="vm.setReturn(this)">{{ return }}</div>
+      <div ng-if="!(vm.places.return | filter: vm.return).length">Nenhuma localidade encontrada</div>
+    </div>
   </div>
 
   <div class="form-group clearfix">
@@ -43,6 +53,6 @@
   </div>
 
   <div class="form-group">
-    <button type="button" class="btn btn-primary" id="btn-search">Buscar</button>
+    <button type="button" class="btn btn-primary" id="btn-search" ng-click="vm.btnSearch()">Buscar</button>
   </div>
 </div>
