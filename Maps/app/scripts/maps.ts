@@ -58,7 +58,7 @@ abstract class Maps {
     let result: IMarker[] = [];
 
     $.ajax({
-      url: './datasource/markers.json',
+      url: './release/datasource/markers.json',
       headers: { "Accept": "application/json" },
       method: "GET",
       async: false,

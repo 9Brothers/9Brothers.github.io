@@ -77,7 +77,7 @@ var Maps = (function () {
     Maps.GetPositions = function () {
         var result = [];
         $.ajax({
-            url: './datasource/markers.json',
+            url: './release/datasource/markers.json',
             headers: { "Accept": "application/json" },
             method: "GET",
             async: false,
