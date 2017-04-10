@@ -44,7 +44,8 @@ abstract class Maps {
     let marker = new google.maps.Marker({
       position: mark.latlng,
       map: this.map,
-      title: mark.title
+      title: mark.title,
+      icon: mark.icon
     })
   }
 

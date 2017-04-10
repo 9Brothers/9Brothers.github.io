@@ -11,7 +11,7 @@ gulp.task('typescript', function () {
 });
 
 gulp.task('assets', function () {
-  return gulp.src('app/**/*.{html,js,json}')
+  return gulp.src('app/**/*.{html,js,json,jpg,jpeg,png}')
     .pipe(gulp.dest('release'));
 });
 

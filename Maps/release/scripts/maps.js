@@ -65,7 +65,8 @@ var Maps = (function () {
         var marker = new google.maps.Marker({
             position: mark.latlng,
             map: this.map,
-            title: mark.title
+            title: mark.title,
+            icon: mark.icon
         });
     };
     Maps.AddMarkers = function (markers) {
