@@ -1,13 +1,13 @@
 {
   "positions": [
-    { "latlng": { "lat": 49.80404, "lng": 9.96233 }, "icon": "../release/images/1.jpg" },
-    { "latlng": { "lat": 50.76891, "lng": 6.11499 }, "icon": "../release/images/2.jpg" },
-    { "latlng": { "lat": 51.53548, "lng": 6.80592 }, "icon": "../release/images/3.jpg" },
-    { "latlng": { "lat": 51.31991, "lng": 9.50523 }, "icon": "../release/images/4.jpg" },
-    { "latlng": { "lat": 48.70158, "lng": 9.66089 }, "icon": "../release/images/5.jpg" },
-    { "latlng": { "lat": 53.55608, "lng": 9.93368 }, "icon": "../release/images/6.jpg" },
-    { "latlng": { "lat": 48.14496, "lng": 11.56122 }, "icon": "../release/images/7.jpg" },
-    { "latlng": { "lat": 52.5319, "lng": 13.34253 }, "icon": "../release/images/8.jpg" },
-    { "latlng": { "lat": 50.77715, "lng": 6.11327 }, "icon": "../release/images/9.jpg" }
+    { "latlng": { "lat": 49.80404, "lng": 9.96233 }, "icon": "./release/images/1.jpg" },
+    { "latlng": { "lat": 50.76891, "lng": 6.11499 }, "icon": "./release/images/2.jpg" },
+    { "latlng": { "lat": 51.53548, "lng": 6.80592 }, "icon": "./release/images/3.jpg" },
+    { "latlng": { "lat": 51.31991, "lng": 9.50523 }, "icon": "./release/images/4.jpg" },
+    { "latlng": { "lat": 48.70158, "lng": 9.66089 }, "icon": "./release/images/5.jpg" },
+    { "latlng": { "lat": 53.55608, "lng": 9.93368 }, "icon": "./release/images/6.jpg" },
+    { "latlng": { "lat": 48.14496, "lng": 11.56122 }, "icon": "./release/images/7.jpg" },
+    { "latlng": { "lat": 52.5319, "lng": 13.34253 }, "icon": "./release/images/8.jpg" },
+    { "latlng": { "lat": 50.77715, "lng": 6.11327 }, "icon": "./release/images/9.jpg" }
   ]
 }
