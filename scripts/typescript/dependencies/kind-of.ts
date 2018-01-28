@@ -1,4 +1,6 @@
-import { IsBuffer } from "./is-checkers/is-buffer";
+import { IsBuffer } from "../is-checkers/is-buffer";
+
+
 
 /**
  * Get the native `typeof` a value.
