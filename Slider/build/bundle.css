@@ -1,0 +1,54 @@
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+  font-family: FontAwesome;
+  src: url(/us/k4/styles/fonts/fontawesome-webfont.eot?v=4.2.0);
+  src: url(/us/k4/styles/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0) format("embedded-opentype"), url(/us/k4/styles/fonts/fontawesome-webfont.woff?v=4.2.0) format("woff"), url(/us/k4/styles/fonts/fontawesome-webfont.ttf?v=4.2.0) format("truetype"), url(/us/k4/styles/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+div[nb-slider] {
+  overflow: hidden; }
+  div[nb-slider] .slider-container > div {
+    display: inline-block;
+    vertical-align: middle;
+    height: 545px; }
+    div[nb-slider] .slider-container > div .main-picture {
+      width: inherit;
+      height: 385px;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center; }
+      div[nb-slider] .slider-container > div .main-picture .left-arrow, div[nb-slider] .slider-container > div .main-picture .right-arrow {
+        position: absolute;
+        bottom: 0;
+        width: 49px;
+        height: 42px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5); }
+      div[nb-slider] .slider-container > div .main-picture .left-arrow {
+        left: 0; }
+      div[nb-slider] .slider-container > div .main-picture .right-arrow {
+        right: 0; }
+    div[nb-slider] .slider-container > div .box-container {
+      height: 160px; }
+      div[nb-slider] .slider-container > div .box-container .second-picture, div[nb-slider] .slider-container > div .box-container .third-picture {
+        width: 50%;
+        height: 160px;
+        float: left; }
+      div[nb-slider] .slider-container > div .box-container .second-picture {
+        background-size: cover;
+        background-position: center; }
+      div[nb-slider] .slider-container > div .box-container .third-picture {
+        background-size: cover;
+        background-position: center; }
+  div[nb-slider] .slider-container[sliding="false"] {
+    cursor: -webkit-grab;
+    transition: transform 0.15s ease-out; }
+  div[nb-slider] .slider-container[sliding="true"] {
+    cursor: -webkit-grabbing; }
+
+/*# sourceMappingURL=bundle.css.map */

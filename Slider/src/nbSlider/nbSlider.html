@@ -1,0 +1,14 @@
+<div class="slider-container" sliding="false">
+  <div ng-repeat="picture in vm.pictures">
+    <div class="main-picture" ng-style="picture.main">
+      <div class="left-arrow"><i class="icon icon_chevron2-left" aria-hidden="true"></i></div>
+      <div class="right-arrow"><i class="icon icon_chevron2-right" aria-hidden="true"></i></div>
+    </div>
+    <div class="box-container">
+      <div class="second-picture" ng-style="picture.second"></div>
+      <div class="third-picture" ng-style="picture.third"></div>
+    </div>
+  </div>
+</div>
+
+

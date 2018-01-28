@@ -1,0 +1,26 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "photo slider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Heber Teixeira",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-typescript": "^3.1.6",
+    "gulp-watch": "^4.3.11",
+    "live-server": "^1.2.0",
+    "typescript": "^2.3.2",
+    "typings": "^2.1.1"
+  },
+  "dependencies": {
+    "@types/angular": "^1.6.17"
+  }
+}

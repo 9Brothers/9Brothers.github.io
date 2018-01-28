@@ -1,0 +1,96 @@
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+    font-family: FontAwesome;
+    src: url(/us/k4/styles/fonts/fontawesome-webfont.eot?v=4.2.0);
+    src: url(/us/k4/styles/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0) format('embedded-opentype'),url(/us/k4/styles/fonts/fontawesome-webfont.woff?v=4.2.0) format('woff'),url(/us/k4/styles/fonts/fontawesome-webfont.ttf?v=4.2.0) format('truetype'),url(/us/k4/styles/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+
+
+div[nb-slider] {
+  $bigPicture: 385px;
+  $boxheight: 160px;
+  // $containerWidth: 680px;
+  // width: $containerWidth;
+  overflow: hidden;
+
+  .slider-container {
+    // width: 2040px;
+    
+    > div {
+      display: inline-block;
+      vertical-align: middle;
+      // width: $containerWidth;
+      height: $bigPicture + $boxheight;
+
+      .main-picture {
+        width: inherit;
+        height: $bigPicture;
+        position: relative;      
+        overflow: hidden;
+        background: {      
+          size: cover;
+          position: center;
+        }
+
+        .left-arrow, .right-arrow {
+          position: absolute;
+          bottom: 0;
+          width: 49px;
+          height: 42px;
+          color: #fff;
+          background-color: rgba(0,0,0,.5); 
+        }
+
+        .left-arrow {
+          left: 0;      
+        }
+
+        .right-arrow {
+          right: 0;
+        }
+      }
+
+      .box-container {
+        height: $boxheight;
+
+        .second-picture, .third-picture {
+          width: 50%;    
+          height: $boxheight;
+          float: left;    
+        }
+
+        .second-picture {
+          background: {
+            size: cover;
+            position: center;
+          }
+        }
+
+        .third-picture {
+          background: {      
+            size: cover;
+            position: center;
+          }
+        }
+      }
+
+    }
+  }
+
+  .slider-container[sliding="false"] {
+    cursor: -webkit-grab;
+    transition: transform 0.15s ease-out;
+  }
+
+  .slider-container[sliding="true"] {
+    cursor: -webkit-grabbing; 
+  }
+
+
+}
